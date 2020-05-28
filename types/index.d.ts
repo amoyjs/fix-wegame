@@ -1,3 +1,2 @@
-declare module '@amoy/fix-wegame' {
-    export default function fixWeGame(PIXI: any): any
-}
+export function fixWeGame(event: any): any
+export function deprecatedFixWeGame(PIXI: any): void

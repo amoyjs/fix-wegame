@@ -257,7 +257,17 @@ function install(PIXI)
     }
 }
 
-function index (PIXI) {
+function index (event) {
+    event.on('beforeCreate', function (_a) {
+        var PIXI = _a.PIXI;
+        if (typeof eval !== 'function')
+            install(PIXI);
+        PIXI.Renderer.create = function (options) {
+            return new PIXI.Renderer(options);
+        };
+    });
+}
+function deprecatedFixWeGame(PIXI) {
     if (typeof eval !== 'function')
         install(PIXI);
     PIXI.Renderer.create = function (options) {
@@ -266,4 +276,5 @@ function index (PIXI) {
 }
 
 export default index;
+export { deprecatedFixWeGame };
 //# sourceMappingURL=fix-wegame.es.js.map

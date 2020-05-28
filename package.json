@@ -1,7 +1,7 @@
 {
   "name": "@amoy/fix-wegame",
   "moduleName": "fixWeGame",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Fix WeGame.",
   "main": "dist/fix-wegame.js",
   "module": "dist/fix-wegame.es.js",
@@ -10,7 +10,7 @@
     "start": "NODE_ENV=development rollup -w -c rollup.config.js",
     "dev": "NODE_ENV=development rollup -c rollup.config.js",
     "prod": "NODE_ENV=production rollup -c rollup.config.js",
-    "publish": "rm -rf dist && npm run dev && npm run prod"
+    "build": "rm -rf dist && npm run dev && npm run prod"
   },
   "repository": {
     "url": "https://github.com/amoyjs/fix-wegame.git",

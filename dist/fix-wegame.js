@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-    typeof define === 'function' && define.amd ? define(factory) :
-    (global = global || self, global.fixWeGame = factory());
-}(this, function () { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+    typeof define === 'function' && define.amd ? define(['exports'], factory) :
+    (global = global || self, factory(global.fixWeGame = {}));
+}(this, (function (exports) { 'use strict';
 
     /*!
      * @pixi/unsafe-eval - v5.0.4
@@ -263,7 +263,17 @@
         }
     }
 
-    function index (PIXI) {
+    function index (event) {
+        event.on('beforeCreate', function (_a) {
+            var PIXI = _a.PIXI;
+            if (typeof eval !== 'function')
+                install(PIXI);
+            PIXI.Renderer.create = function (options) {
+                return new PIXI.Renderer(options);
+            };
+        });
+    }
+    function deprecatedFixWeGame(PIXI) {
         if (typeof eval !== 'function')
             install(PIXI);
         PIXI.Renderer.create = function (options) {
@@ -271,7 +281,10 @@
         };
     }
 
-    return index;
+    exports.default = index;
+    exports.deprecatedFixWeGame = deprecatedFixWeGame;
 
-}));
+    Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
 //# sourceMappingURL=fix-wegame.js.map
