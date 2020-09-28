@@ -1,7 +1,7 @@
 {
   "name": "@amoy/fix-wegame",
   "moduleName": "fixWeGame",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Fix WeGame.",
   "main": "dist/fix-wegame.js",
   "module": "dist/fix-wegame.es.js",
@@ -19,6 +19,7 @@
   "author": "大板栗 <576839360@qq.com>",
   "license": "MIT",
   "devDependencies": {
+    "rollup": "^2.28.2",
     "rollup-plugin-alias": "^2.0.1",
     "rollup-plugin-babel-minify": "^9.1.0",
     "rollup-plugin-commonjs": "^10.1.0",
