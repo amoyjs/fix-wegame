@@ -1,11 +1,11 @@
 {
   "name": "@amoy/fix-wegame",
   "moduleName": "fixWeGame",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Fix WeGame.",
   "main": "dist/fix-wegame.js",
   "module": "dist/fix-wegame.es.js",
-  "types": "types/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "NODE_ENV=development rollup -w -c rollup.config.js",
     "dev": "NODE_ENV=development rollup -c rollup.config.js",
@@ -24,11 +24,11 @@
     "rollup-plugin-babel-minify": "^9.1.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-typescript": "^1.0.1",
     "tslib": "^1.10.0",
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@pixi/unsafe-eval": "^5.0.4"
+    "@pixi/unsafe-eval": "^5.0.4",
+    "rollup-plugin-typescript2": "^0.27.3"
   }
 }
