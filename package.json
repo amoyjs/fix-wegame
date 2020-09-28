@@ -1,7 +1,7 @@
 {
   "name": "@amoy/fix-wegame",
   "moduleName": "fixWeGame",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Fix WeGame.",
   "main": "dist/fix-wegame.js",
   "module": "dist/fix-wegame.es.js",
