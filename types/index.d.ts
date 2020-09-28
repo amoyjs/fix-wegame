@@ -1,2 +1,2 @@
-export function fixWeGame(event: any): any
+export function fixWeGame(extensions: any): any
 export function deprecatedFixWeGame(PIXI: any): void
